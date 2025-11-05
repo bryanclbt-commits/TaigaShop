@@ -1,0 +1,338 @@
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+/* header et navigation */
+header {
+    background-color: #ffffff;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list a:hover {
+    color: #0066cc;
+}
+
+.active {
+    font-weight: bold;
+    color: #0066cc;
+}
+
+/* section accueil */
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero-text {
+    background-color: rgba(214, 195, 138, 0.374);
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+/* Sections générales */ 
+
+section {
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* le grid du catalogue */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    list-style-type: none;
+
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.product-card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: #ffffff;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #009900;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* formulaire */ 
+
+form {
+    width: 80%;
+    max-width: 500px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: left;
+}
+/* nom et adresse à compléter seulement */
+.coordonne{
+    width: 50%;
+    display: flex;
+    border-width: .5px;
+    text-align: left;
+    border-radius: 5px;
+    padding: 3px ;
+}
+.envoyer {
+    cursor: pointer;
+}
+textarea {
+    border-radius: 5px;
+}
+
+/* les footer */ 
+footer {
+    background-color: #f2f2f2;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #cccccc;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+footer p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+footer address {
+    font-style: normal;
+    color: #555555;
+}
+
+/* responsive tablette 1024 */
+@media screen and (max-width: 1024px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+/* responsive tel 600px */
+@media screen and (max-width: 600px) {
+
+    header {
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .site-name {
+        font-size: 18px;
+    }
+
+    .hero img {
+        height: 200px;
+    }
+
+    .hero-text h1 {
+        font-size: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* table */ 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+caption {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+th, td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dddddd;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* présentation */ 
+.presentation ul {
+    list-style-type: disc;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-detail > figure > img {
+    display: inline-flex;
+    width: 30%;
+}
+
+.featured-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
